@@ -1,0 +1,87 @@
+\documentclass[10pt]{extarticle}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[margin=3cm]{geometry} % Define todas as margens para 2 cm
+\usepackage{bm}
+\usepackage{xcolor}
+\usepackage[normalem]{ulem}
+
+
+\newcommand{\todo}[1]{\textcolor{blue}{#1}}
+\newcommand{\changecom}[1]{\textcolor{red}{#1}}
+\newcommand{\E}[1]{\mathbb{E}\!\left[#1\right]}
+\newcommand{\xd}{x_{\text{\tiny dep}}}
+\newcommand{\xe}{x_{\text{\tiny eat}}}
+
+\title{Range resident seed dispersal}
+\author{Vinicius Menuci}
+\date{\today}
+
+\begin{document}
+
+{\bf Slide 1:}
+(still dont know about the slide content)
+The core idea is to bridge two recent theoretical advances of the group: the SMD paper and the HR work (of ocurse, Im not crazy to want to actually bridge the two things that the goru pdo but this is just the beggining of it all). The idea is to replace the phenomenological dispersal kernel with explicit movement driven seed deposition to understad how aniimal behaviour shapes plant spatial structure and possibly coexistence. I will explain this more in depth of course.
+
+{\bf Slide 2: Motivation: Animals as primary sources of dispersal}
+
+To motivate why this matters: in tropical rainforests, up to 90\% of tree species do not drop seeds passively. They rely on foraging animals—birds, primates, and mammals—to transport their seeds. This means that where new plants establish is not a simple random variable around the parent tree. It is the direct consequence of animal movement trajectories, feeding preferences, and digestion times. If we want to understand forest spatial patterns, we must look at the movement behavior of the seed dispersers.
+
+contetn: 
+~70 - 9\% of tropical plant species rely on animal frugivers for seed dispersal
+
+Seed deposition is driven by animal foraging and gut passage times 
+
+Spatial structure of the vegetation emerges directly from anumal space use 
+
+(image of animal foraging bird priamte, diagram of zoochory seed dispersal)
+
+{\bf Slide 3: The limitation on traditional Dispersal Kernels}
+
+In traditional spatial models—such as standard Individual-Based Models or Spatial Moment Dynamics—dispersal is modeled phenomenologically. We typically draw seed positions from an isotropic kernel centered directly on the mother tree, like a Gaussian distribution. But if an animal eats a fruit, walks across its home range, and excretes the seed hours later, the peak of seed deposition is NOT at the mother tree! You can image that tt shifts toward the animal's home-range center and activity hubs. Treating zoochory as a simple parent-centered kernel misses the fundamental movement mechanism.
+
+Traditional Kernels: istropic parent-centred kernels (gaussians 2D etc)
+
+Assumes maxmum seed density at the parent tree 
+
+Real zoochory: seeds travel with the animal through the home range. This can be either by consuming the plants or on their cheeks/on their fur.
+
+{\bf Slide 4: Where the project idea came from}
+
+The starting point for this project came from conversations around the work of Thorsten Wiegand and colleagues in 2021\. They showed that when recruitment clusters are decoupled from parent tree locations—mimicking animal dispersal or light gaps—it prevents rare species from suffering excessive conspecific crowding. This creates a rare-species advantage and stabilizes multi-species coexistence. However, Wiegand et al. implemented this animal dispersal heuristically. Our goal is to take the next step: deriving this recruitment pattern analytically from continuous-time animal movement.
+
+* **Wiegand et al. (2021)**: Analyzed tree spatial patterns across ForestGEO megaplots.
+
+* **Key Finding**: Decoupling seed recruitment from parent locations eliminates rare-species crowding penalties.
+
+* **Open Question**: How do we derive this decoupling *mechanistically* from animal movement?
+
+**Visual Elements\&amp; Image Instructions**:
+
+* **Image**: Screenshot of the title banner of *Wiegand et al. (2021) Nature Ecology \&amp; Evolution*[1], alongside Extended Data Figure 5c from that paper showing stable species coexistence when recruits are scattered around random cluster centers[14].
+
+* **Image Source**: Direct screenshot of *Wiegand et al. (2021)* paper title and Figure 5c / Figure 2[1].
+
+
+\section{Model}
+
+A lot of the things I did uup until now were in a pedagogical way, but they all have some scientific meaning. Everything that I have calculated and done I did in a pedagogical way, so I could learn these methods and etc. but I will use all results. 
+
+Our model is heavily inspired by models that the group, specifically the starting point was the model used on 2025 paper which maybe you are all familiar with, but I will remember it. There we had a population of sessile plants in which we have two fundamental process: birth and death. For the birth process you basically every plant had the same probability of dispersing, the $b$ term the rate, and the new plant is dispersed through a Kernel, in this case a Gaussian kernel, and as I said it's centered at the parent plant.
+
+For the death term a plant dies with a base-line rate, $d_0$ plus the contribution of the competition kernel, which can be a gaussian or top-hat, and then you sum up this contributions for every plant in the pattern.
+
+We are only going to change the birth process, de death will continue exactly the same. How are we changing the birth? Introducing an animal, and through this animal the seeds will be dispersed. Talking a little bit about the animal, it is this new entitiy in the system and in broad terms it will wonder around the landscape, sometimes he will eat a plant, then he'll move a little, and then it will depoist/poop the seed somewhere else and that way it disperses right.
+
+One thing to notice is that there's no demographic dynamics in the animal, for now is just one animal and it does not die. Another thing is that the animal has this internal state varible that can be either foraging or digesting. If the animal is foraging he can eat a seed and if he is digesting he can depoist a seed. If hes foraging he cannot deposit and if hes digesting he cannot eat. So he eats one time and until he poops he doesnt eat again.
+
+So lets look at the process:
+
+- first one is ingestion. Here an animal in state foraging located at x_A pluus a plant at x_i generates an animal in state D + the same plant in x_i. That is to say that the plant is not cosumed during the eating process, it just takes a seed or something. No plant death during this process. And this is done with this eating kernel which sorry I think I didnt put here the definiion, but this is basically a top hat, if the distance for the plant is less than r_e, than it can eat the plant with rate omega_e.
+
+- second is deposition, an animal in digfestion state at x_A becomes the animal at x_A plus a plant exactly at x_a, and this is done with rate omega_e. This will be very important later, the digestion rate is constant so the probability density function is exponential right.
+
+- movement: indepdnent of the animal's state, and we model the movement thougu the home range framework, with the ostern uhlenbeck eqautions. Again, I think youu are all familiarized with it but I will explain a little bit more next. But this is basically after delta T the naimal is in this new position given by the OU propagator. 
+
+\end{document}

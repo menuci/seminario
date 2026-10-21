@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 205" width="1152" height="410">
+  <defs>
+    <marker id="seta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ffb86c"/>
+    </marker>
+  </defs>
+
+  <!-- campo (vista de cima) -->
+  <rect x="16" y="76" width="544" height="124" rx="10" fill="#ffffff" fill-opacity="0.025" stroke="#ffffff" stroke-opacity="0.16"/>
+
+  <!-- kernel 2D -->
+  <circle cx="262" cy="138" r="30" fill="none" stroke="#ffb86c" stroke-opacity="0.55" stroke-dasharray="3 3"/>
+  <circle cx="262" cy="138" r="60" fill="none" stroke="#ffb86c" stroke-opacity="0.28" stroke-dasharray="3 3"/>
+
+  <!-- perfil do kernel (contínua: gaussiana; tracejada: top-hat) -->
+  <line x1="147" y1="62" x2="377" y2="62" stroke="#9aa5b1" stroke-opacity="0.6"/>
+  <path d="M157,62 L214.0,62 L214.0,33.5 L310.0,33.5 L310.0,62 L367,62" fill="none" stroke="#ffb86c" stroke-opacity="0.45" stroke-width="1.4" stroke-dasharray="4 3"/>
+  <path d="M157.0,61.9 L160.0,61.9 L163.0,61.8 L166.0,61.7 L169.0,61.6 L172.0,61.5 L175.0,61.3 L178.0,61.1 L181.0,60.8 L184.0,60.4 L187.0,60.0 L190.0,59.4 L193.0,58.7 L196.0,57.9 L199.0,56.9 L202.0,55.8 L205.0,54.4 L208.0,52.9 L211.0,51.2 L214.0,49.2 L217.0,47.1 L220.0,44.7 L223.0,42.2 L226.0,39.6 L229.0,36.9 L232.0,34.1 L235.0,31.3 L238.0,28.6 L241.0,26.0 L244.0,23.6 L247.0,21.4 L250.0,19.5 L253.0,18.0 L256.0,16.9 L259.0,16.2 L262.0,16.0 L265.0,16.2 L268.0,16.9 L271.0,18.0 L274.0,19.5 L277.0,21.4 L280.0,23.6 L283.0,26.0 L286.0,28.6 L289.0,31.3 L292.0,34.1 L295.0,36.9 L298.0,39.6 L301.0,42.2 L304.0,44.7 L307.0,47.1 L310.0,49.2 L313.0,51.2 L316.0,52.9 L319.0,54.4 L322.0,55.8 L325.0,56.9 L328.0,57.9 L331.0,58.7 L334.0,59.4 L337.0,60.0 L340.0,60.4 L343.0,60.8 L346.0,61.1 L349.0,61.3 L352.0,61.5 L355.0,61.6 L358.0,61.7 L361.0,61.8 L364.0,61.9 L367.0,61.9" fill="none" stroke="#ffb86c" stroke-width="2.2" stroke-linejoin="round"/>
+  <line x1="262" y1="16" x2="262" y2="128" stroke="#ffb86c" stroke-opacity="0.4" stroke-dasharray="2 4"/>
+  <svg x="321.2" y="24.5" width="21.7" height="11.2" viewBox="0.0 -442.0 1274.4 660.0" color="#ffb86c" overflow="visible"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D711" d="M92 210Q92 176 106 149T142 108T185 85T220 72L235 70L237 71L250 112Q268 170 283 211T322 299T370 375T429 423T502 442Q547 442 582 410T618 302Q618 224 575 152T457 35T299 -10Q273 -10 273 -12L266 -48Q260 -83 252 -125T241 -179Q236 -203 215 -212Q204 -218 190 -218Q159 -215 159 -185Q159 -175 214 -2L209 0Q204 2 195 5T173 14T147 28T120 46T94 71T71 103T56 142T50 190Q50 238 76 311T149 431H162Q183 431 183 423Q183 417 175 409Q134 361 114 300T92 210ZM574 278Q574 320 550 344T486 369Q437 369 394 329T323 218Q309 184 295 109L286 64Q304 62 306 62Q423 62 498 131T574 278Z"></path></g><g data-mml-node="mi" transform="translate(687,-150) scale(0.707)"><path data-c="1D436" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q484 659 454 652T382 628T299 572T226 479Q194 422 175 346T156 222Q156 108 232 58Q280 24 350 24Q441 24 512 92T606 240Q610 253 612 255T628 257Q648 257 648 248Q648 243 647 239Q618 132 523 55T319 -22Q206 -22 128 53T50 252Z"></path></g></g></g></g></svg>
+
+  <!-- competição: setas dos vizinhos para a focal -->
+  <line x1="235.0" y1="130.8" x2="249.4" y2="134.6" stroke="#ffb86c" stroke-width="1.43" stroke-opacity="0.67" marker-end="url(#seta)"/>
+  <line x1="292.1" y1="127.1" x2="274.2" y2="133.6" stroke="#ffb86c" stroke-width="1.32" stroke-opacity="0.62" marker-end="url(#seta)"/>
+  <line x1="249.7" y1="104.2" x2="257.6" y2="125.8" stroke="#ffb86c" stroke-width="1.21" stroke-opacity="0.57" marker-end="url(#seta)"/>
+  <line x1="279.0" y1="167.4" x2="268.5" y2="149.3" stroke="#ffb86c" stroke-width="1.26" stroke-opacity="0.59" marker-end="url(#seta)"/>
+  <line x1="201.9" y1="159.9" x2="249.8" y2="142.4" stroke="#ffb86c" stroke-width="0.78" stroke-opacity="0.39" marker-end="url(#seta)"/>
+  <line x1="337.7" y1="156.9" x2="274.6" y2="141.1" stroke="#ffb86c" stroke-width="0.72" stroke-opacity="0.36" marker-end="url(#seta)"/>
+  <line x1="289.6" y1="93.9" x2="268.9" y2="127.0" stroke="#ffb86c" stroke-width="0.90" stroke-opacity="0.44" marker-end="url(#seta)"/>
+
+  <!-- vizinhos -->
+  <g fill="#e6edf3" fill-opacity="0.9">
+    <circle cx="227.2" cy="128.7" r="5"/>
+    <circle cx="299.6" cy="124.3" r="5"/>
+    <circle cx="247.0" cy="96.7" r="5"/>
+    <circle cx="283.0" cy="174.4" r="5"/>
+    <circle cx="194.3" cy="162.6" r="5"/>
+    <circle cx="345.4" cy="158.8" r="5"/>
+    <circle cx="293.8" cy="87.1" r="5"/>
+  </g>
+  <svg x="356.4" y="157.6" width="13.7" height="10.3" viewBox="0.0 -444.0 981.3 738.2" color="#e6edf3" overflow="visible"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D431" d="M227 0Q212 3 121 3Q40 3 28 0H21V62H117L245 213L109 382H26V444H34Q49 441 143 441Q247 441 265 444H274V382H246L281 339Q315 297 316 297Q320 297 354 341L389 382H352V444H360Q375 441 466 441Q547 441 559 444H566V382H471L355 246L504 63L545 62H586V0H578Q563 3 469 3Q365 3 347 0H338V62H366Q366 63 326 112T285 163L198 63L217 62H235V0H227Z"></path></g></g><g data-mml-node="mi" transform="translate(640,-150) scale(0.707)"><path data-c="1D457" d="M297 596Q297 627 318 644T361 661Q378 661 389 651T403 623Q403 595 384 576T340 557Q322 557 310 567T297 596ZM288 376Q288 405 262 405Q240 405 220 393T185 362T161 325T144 293L137 279Q135 278 121 278H107Q101 284 101 286T105 299Q126 348 164 391T252 441Q253 441 260 441T272 442Q296 441 316 432Q341 418 354 401T367 348V332L318 133Q267 -67 264 -75Q246 -125 194 -164T75 -204Q25 -204 7 -183T-12 -137Q-12 -110 7 -91T53 -71Q70 -71 82 -81T95 -112Q95 -148 63 -167Q69 -168 77 -168Q111 -168 139 -140T182 -74L193 -32Q204 11 219 72T251 197T278 308T289 365Q289 372 288 376Z"></path></g></g></g></g></svg>
+
+  <!-- planta focal -->
+  <circle cx="262" cy="138" r="8" fill="#e6edf3" stroke="#ffb86c" stroke-width="2.5"/>
+  <svg x="238.0" y="158.3" width="14.0" height="9.0" viewBox="0.0 -444.0 934.0 601.8" color="#e6edf3" overflow="visible"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D431" d="M227 0Q212 3 121 3Q40 3 28 0H21V62H117L245 213L109 382H26V444H34Q49 441 143 441Q247 441 265 444H274V382H246L281 339Q315 297 316 297Q320 297 354 341L389 382H352V444H360Q375 441 466 441Q547 441 559 444H566V382H471L355 246L504 63L545 62H586V0H578Q563 3 469 3Q365 3 347 0H338V62H366Q366 63 326 112T285 163L198 63L217 62H235V0H227Z"></path></g></g><g data-mml-node="mi" transform="translate(640,-150) scale(0.707)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></g></svg>
+</svg>

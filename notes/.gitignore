@@ -1,0 +1,13 @@
+# arquivos auxiliares 
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.bbl
+*.blg
+
+# pdf principal 
+main.pdf

@@ -1,0 +1,22 @@
+<script>
+  // Restart SVG animations when they appear (slide or fragment),
+  // instead of starting when Reveal preloads the slide.
+  // Works for: images with "animada" in the file name and inline SVGs with class="animada".
+  window.addEventListener('load', () => {
+    const restart = (el) => {
+      if (el.tagName === 'IMG') {
+        el.src = el.src.split('?')[0] + '?t=' + Date.now();
+      } else if (el.setCurrentTime) {
+        el.setCurrentTime(0);
+        el.unpauseAnimations();
+      }
+    };
+    const animations = (root) => root.querySelectorAll('img[src*="animada"], svg.animada');
+
+    Reveal.on('fragmentshown', (e) => animations(e.fragment).forEach(restart));
+    Reveal.on('slidechanged', (e) => {
+      // animations inside a fragment restart when the fragment is shown instead
+      animations(e.currentSlide).forEach((el) => { if (!el.closest('.fragment')) restart(el); });
+    });
+  });
+</script>

@@ -1,0 +1,271 @@
+/*-- scss:rules --*/
+
+// Capa: autor principal em destaque, orientadores menores e empilhados
+#title-slide {
+  text-align: center;
+
+  .title    { font-size: 1.7em; line-height: 1.15; }
+  .subtitle { font-size: 0.6em; color: #9aa5b1; }
+  .date     { font-size: 0.6em; color: #c9d1d9; }
+
+  .quarto-title-authors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quarto-title-author:not(:first-child) .quarto-title-author-name {
+    font-size: 0.6em;
+    color: #c9d1d9;
+  }
+}
+
+// Títulos "###" dentro de colunas viram rótulos pequenos
+.reveal .column > h3 {
+  margin: 0 0 0.6em;
+  font-size: 0.42em;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8be9fd;
+}
+
+// Legendas de figura pequenas e centralizadas
+.reveal .slide figure > figcaption {
+  margin-top: 0.3em;
+  font-size: 0.5em;
+  text-align: center;
+  color: #c9d1d9;
+}
+
+// Fotos com cantos arredondados e sombra
+.reveal img.foto {
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  display: block;
+  margin: 0 auto;
+}
+
+// Menos espaço vertical entre figuras dentro de colunas
+.reveal .columns .quarto-figure,
+.reveal .columns .quarto-layout-panel {
+  margin-bottom: 0.5em;
+}
+
+.reveal .columns figure {
+  margin-top: 0;
+}
+
+// Fundo branco atrás dos logos escuros (necessário no tema escuro)
+.reveal .cartao {
+  display: inline-flex;
+  gap: 12px;
+  padding: 10px -50px;
+  background: #ffffff;
+  border-radius: 10px;
+
+  p, img { margin: 0; }
+}
+
+// Linha vertical separando as duas colunas
+.reveal .divisoria {
+  box-sizing: border-box;
+  padding-left: 24px;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+// =====================================================================
+// Introdução & framework
+// =====================================================================
+
+// Negrito = frase-chave destacada
+.reveal .slides strong {
+//color: #8be9fd;
+//  color: #eb233a;
+  color: #bf70ff;
+
+  font-weight: 700;
+}
+
+// Colunas centralizadas verticalmente, com respiro entre elas
+.reveal .columns.centro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Coluna de texto: letra menor, bullets espaçados
+.reveal .texto {
+  font-size: 0.74em;
+
+  ul { margin: 0; }
+
+  li {
+    margin-bottom: 0.9em;
+    line-height: 1.35;
+  }
+
+  li::marker { color: #8be9fd; }
+}
+
+// Cartão reservado para imagem (trocar pela figura final)
+.reveal .img-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  padding: 1em 1.4em;
+  text-align: center;
+  background: linear-gradient(145deg,
+              rgba(139, 233, 253, 0.07),
+              rgba(189, 147, 249, 0.07));
+  border: 2px dashed rgba(139, 233, 253, 0.45);
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+
+  p { margin: 0.35em 0; }
+
+  .ph-tag {
+    display: inline-block;
+    padding: 0.3em 0.9em;
+    font-size: 0.4em;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #0d1117;
+    background: #8be9fd;
+    border-radius: 999px;
+  }
+
+  .ph-desc {
+    display: block;
+    font-size: 0.62em;
+    line-height: 1.35;
+    color: #e6edf3;
+  }
+
+  .ph-source {
+    display: inline-block;
+    margin-top: 0.6em;
+    padding-top: 0.6em;
+    font-size: 0.42em;
+    font-style: italic;
+    color: #9aa5b1;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+}
+
+
+
+// Fragmento "apagado": mais transparente que o padrão (0.5)
+.reveal .slides section .fragment.semi-fade-out.visible {
+  opacity: 0.2;
+}
+
+
+// Slides do modelo: linhas com altura fixa (nada pula entre os slides)
+// Birth = primeira linha (mais alta), Death = a linha logo abaixo
+.reveal .fila-modelo {
+  height: 345px;
+  margin-bottom: 0;
+
+  .img-placeholder {
+    box-sizing: border-box;
+    min-height: 0;
+    height: 245px;
+    padding: 0.6em 1em;
+  }
+}
+.reveal .fila-modelo + .fila-modelo {
+  height: 205px;
+
+  .img-placeholder { height: 195px; }
+}
+
+
+// Coluna das equações: letra menor
+.reveal .eq-modelo {
+  font-size: 0.75em;
+
+  p { margin: 0.2em 0; }
+}
+
+// Rótulo sempre no topo da linha; equação centralizada no espaço restante
+.reveal .fila-modelo > .eq-modelo {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+}
+
+
+// Elementos "apagados" entre slides
+.reveal .apagado {
+  opacity: 0.35;
+}
+
+// Rótulo pequeno (mesmo estilo dos "###" nas colunas), para usar fora das colunas
+.reveal .kicker {
+  display: block;
+  margin: -0.4em 0 -0.6em;
+  font-size: 0.55em;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8be9fd;
+}
+
+
+
+// Processos e taxas alinhados entre as linhas (Birth / Death)
+.reveal .processo {
+  display: grid;
+  grid-template-columns: 42% 1fr;   // largura reservada para o processo
+  align-items: baseline;            // processo e taxa na mesma linha de base
+  margin-top: 0.5em;
+  padding-left: 24px;               // em px: mesmo recuo em qualquer tamanho de letra
+  > :only-child { grid-column: 1 / -1; }  // bloco sozinho ocupa a linha toda
+}
+
+// Slide 3: Birth aberto em três subprocessos
+.reveal .subprocessos {
+  font-size: 0.78em;                  // menor, para os três caberem na linha
+
+  .processo {
+    grid-template-columns: 17em 1fr;  // taxas mais à direita: os processos são mais longos
+    margin-top: 0;
+  }
+
+  p { margin: 0; }
+}
+
+// Nome de cada subprocesso, acima do pictograma
+.reveal .subproc {
+  display: block;
+  margin: 0.9em 0 0 24px;          // mesmo recuo dos processos
+  font-size: 0.7em;
+  font-style: italic;
+  color: #9aa5b1;
+}
+
+// Death: equação mais perto do rótulo (sobra espaço para o Birth)
+.reveal .fila-modelo + .fila-modelo .processo {
+    margin-top: 0.1em;
+}
+
+// Bloco de código com mais espaço entre as linhas (use {.python .espacado ...})
+.reveal div.sourceCode pre.spaced code {
+  line-height: 1.35;
+}
+
+// Foco nos subprocessos do animal: no clique de cada um, só ele fica aceso.
+// Antes de qualquer foco, todos aparecem normais.
+.reveal .slides section .fragment.foco.foco {
+  opacity: 1;
+  visibility: inherit;
+}
+
+.reveal .subprocessos:has(.foco.visible) .fragment.foco:not(.current-fragment) {
+  opacity: 0.35;
+}

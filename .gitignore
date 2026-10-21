@@ -1,0 +1,7 @@
+/.quarto/
+*_files/
+pres_1.html
+venv/
+.venv/
+node_modules/
+__pycache__/

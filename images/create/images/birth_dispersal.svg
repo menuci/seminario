@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 245" width="1152" height="490">
+  <defs>
+    <marker id="seta" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7ee787"/>
+    </marker>
+    <marker id="dupla" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9aa5b1"/>
+    </marker>
+  </defs>
+
+  <!-- campo (vista de cima) -->
+  <rect x="16" y="100" width="544" height="136" rx="10" fill="#ffffff" fill-opacity="0.025" stroke="#ffffff" stroke-opacity="0.16"/>
+
+  <!-- kernel 2D -->
+  <circle cx="225" cy="168" r="30" fill="none" stroke="#7ee787" stroke-opacity="0.6" stroke-dasharray="3 3"/>
+  <circle cx="225" cy="168" r="60" fill="none" stroke="#7ee787" stroke-opacity="0.3" stroke-dasharray="3 3"/>
+
+  <!-- outras plantas -->
+  <g fill="#e6edf3" fill-opacity="0.85">
+    <circle cx="201.9" cy="128.6" r="5"/>
+    <circle cx="365.5" cy="120.0" r="5"/>
+    <circle cx="307.9" cy="152.2" r="5"/>
+    <circle cx="69.0" cy="167.8" r="5"/>
+    <circle cx="74.9" cy="122.0" r="5"/>
+    <circle cx="252.3" cy="203.0" r="5"/>
+    <circle cx="101.9" cy="136.6" r="5"/>
+    <circle cx="353.7" cy="216.2" r="5"/>
+    <circle cx="528.1" cy="117.1" r="5"/>
+    <circle cx="469.2" cy="143.9" r="5"/>
+    <circle cx="194.2" cy="201.8" r="5"/>
+    <circle cx="130.4" cy="176.0" r="5"/>
+    <circle cx="359.5" cy="153.0" r="5"/>
+    <circle cx="313.9" cy="118.9" r="5"/>
+    <circle cx="437.2" cy="188.9" r="5"/>
+    <circle cx="162.0" cy="175.2" r="5"/>
+    <circle cx="302.6" cy="208.3" r="5"/>
+  </g>
+
+  <!-- perfil do kernel, pico em cima da mãe -->
+  <line x1="110" y1="84" x2="340" y2="84" stroke="#9aa5b1" stroke-opacity="0.6"/>
+  <path d="M120.0,83.9 L123.0,83.8 L126.0,83.8 L129.0,83.7 L132.0,83.5 L135.0,83.4 L138.0,83.2 L141.0,82.9 L144.0,82.5 L147.0,82.1 L150.0,81.5 L153.0,80.9 L156.0,80.0 L159.0,79.0 L162.0,77.8 L165.0,76.4 L168.0,74.8 L171.0,72.9 L174.0,70.8 L177.0,68.4 L180.0,65.8 L183.0,63.0 L186.0,59.9 L189.0,56.7 L192.0,53.4 L195.0,50.0 L198.0,46.6 L201.0,43.3 L204.0,40.2 L207.0,37.2 L210.0,34.6 L213.0,32.3 L216.0,30.5 L219.0,29.1 L222.0,28.3 L225.0,28.0 L228.0,28.3 L231.0,29.1 L234.0,30.5 L237.0,32.3 L240.0,34.6 L243.0,37.2 L246.0,40.2 L249.0,43.3 L252.0,46.6 L255.0,50.0 L258.0,53.4 L261.0,56.7 L264.0,59.9 L267.0,63.0 L270.0,65.8 L273.0,68.4 L276.0,70.8 L279.0,72.9 L282.0,74.8 L285.0,76.4 L288.0,77.8 L291.0,79.0 L294.0,80.0 L297.0,80.9 L300.0,81.5 L303.0,82.1 L306.0,82.5 L309.0,82.9 L312.0,83.2 L315.0,83.4 L318.0,83.5 L321.0,83.7 L324.0,83.8 L327.0,83.8 L330.0,83.9" fill="none" stroke="#7ee787" stroke-width="2.2" stroke-linejoin="round"/>
+  <line x1="225" y1="28" x2="225" y2="158" stroke="#7ee787" stroke-opacity="0.45" stroke-dasharray="2 4"/>
+  <line x1="228" y1="50.0" x2="252" y2="50.0" stroke="#9aa5b1" stroke-width="1.2"
+        marker-start="url(#dupla)" marker-end="url(#dupla)"/>
+  <svg x="237.0" y="39.3" width="6.1" height="5.9" viewBox="0.0 -442.0 469.0 452.0" color="#9aa5b1" overflow="visible"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D460" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z"></path></g></g></g></svg>
+  <svg x="274.3" y="30.2" width="21.5" height="15.3" viewBox="0.0 -694.0 1264.5 899.0" color="#7ee787" overflow="visible"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D719" d="M409 688Q413 694 421 694H429H442Q448 688 448 686Q448 679 418 563Q411 535 404 504T392 458L388 442Q388 441 397 441T429 435T477 418Q521 397 550 357T579 260T548 151T471 65T374 11T279 -10H275L251 -105Q245 -128 238 -160Q230 -192 227 -198T215 -205H209Q189 -205 189 -198Q189 -193 211 -103L234 -11Q234 -10 226 -10Q221 -10 206 -8T161 6T107 36T62 89T43 171Q43 231 76 284T157 370T254 422T342 441Q347 441 348 445L378 567Q409 686 409 688ZM122 150Q122 116 134 91T167 53T203 35T237 27H244L337 404Q333 404 326 403T297 395T255 379T211 350T170 304Q152 276 137 237Q122 191 122 150ZM500 282Q500 320 484 347T444 385T405 400T381 404H378L332 217L284 29Q284 27 285 27Q293 27 317 33T357 47Q400 66 431 100T475 170T494 234T500 282Z"></path></g><g data-mml-node="mi" transform="translate(629,-150) scale(0.707)"><path data-c="1D437" d="M287 628Q287 635 230 637Q207 637 200 638T193 647Q193 655 197 667T204 682Q206 683 403 683Q570 682 590 682T630 676Q702 659 752 597T803 431Q803 275 696 151T444 3L430 1L236 0H125H72Q48 0 41 2T33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM703 469Q703 507 692 537T666 584T629 613T590 629T555 636Q553 636 541 636T512 636T479 637H436Q392 637 386 627Q384 623 313 339T242 52Q242 48 253 48T330 47Q335 47 349 47T373 46Q499 46 581 128Q617 164 640 212T683 339T703 469Z"></path></g></g></g></g></svg>
+
+  <!-- dispersão: seta reta mãe -> filhote -->
+  <line x1="234.9" y1="163.2" x2="271.3" y2="145.7" stroke="#7ee787" stroke-width="2"
+        stroke-dasharray="5 3" marker-end="url(#seta)"/>
+
+  <!-- planta-mãe -->
+  <circle cx="225" cy="168" r="8" fill="#e6edf3" stroke="#7ee787" stroke-width="2.5"/>
+  <svg x="218.0" y="186.3" width="14.0" height="9.0" viewBox="0.0 -444.0 934.0 601.8" color="#e6edf3" overflow="visible"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D431" d="M227 0Q212 3 121 3Q40 3 28 0H21V62H117L245 213L109 382H26V444H34Q49 441 143 441Q247 441 265 444H274V382H246L281 339Q315 297 316 297Q320 297 354 341L389 382H352V444H360Q375 441 466 441Q547 441 559 444H566V382H471L355 246L504 63L545 62H586V0H578Q563 3 469 3Q365 3 347 0H338V62H366Q366 63 326 112T285 163L198 63L217 62H235V0H227Z"></path></g></g><g data-mml-node="mi" transform="translate(640,-150) scale(0.707)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></g></svg>
+
+  <!-- filhote -->
+  <circle cx="283" cy="140" r="6.5" fill="#e6edf3"/>
+  <circle cx="283" cy="140" r="11" fill="none" stroke="#7ee787" stroke-width="1.4" stroke-dasharray="2.5 2.5"/>
+  <svg x="278.4" y="159.3" width="9.1" height="6.7" viewBox="0.0 -444.0 607.0 444.0" color="#e6edf3" overflow="visible"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D431" d="M227 0Q212 3 121 3Q40 3 28 0H21V62H117L245 213L109 382H26V444H34Q49 441 143 441Q247 441 265 444H274V382H246L281 339Q315 297 316 297Q320 297 354 341L389 382H352V444H360Q375 441 466 441Q547 441 559 444H566V382H471L355 246L504 63L545 62H586V0H578Q563 3 469 3Q365 3 347 0H338V62H366Q366 63 326 112T285 163L198 63L217 62H235V0H227Z"></path></g></g></g></g></svg>
+</svg>
